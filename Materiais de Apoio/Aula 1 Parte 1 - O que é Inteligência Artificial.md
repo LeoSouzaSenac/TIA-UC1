@@ -1,5 +1,5 @@
 # O que é Inteligência Artificial
-### Material de apoio 1 de 4 — Técnico em Inteligência Artificial (Senac RS)
+### Material de apoio 1/4 — Técnico em Inteligência Artificial (Senac RS)
 
 > Cada seção deste material está identificada com o número do slide correspondente na apresentação, para que você consiga acompanhar em paralelo. Todo termo técnico usado é explicado no momento em que aparece, e também reunido no glossário final.
 
