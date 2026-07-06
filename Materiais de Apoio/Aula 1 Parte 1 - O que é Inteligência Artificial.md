@@ -55,7 +55,7 @@ Para entender como a IA "aprende", primeiro é necessário entender a diferença
 
 Na programação tradicional (a forma como a maior parte do software do mundo ainda é construída), um desenvolvedor escreve regras explícitas, uma por uma, cobrindo todos os casos que o sistema precisa saber lidar. Por exemplo: "se a temperatura for menor que zero graus, exibir a palavra 'gelo' na tela". Essa regra foi definida por uma pessoa, com base no seu próprio raciocínio, e o computador apenas a executa.
 
-O termo técnico para essa regra escrita manualmente é **algoritmo**: uma sequência finita e bem definida de passos que resolve um problema específico.
+O termo técnico para essa regra escrita manualmente é algoritmo[^1].
 
 A limitação da programação tradicional aparece quando o problema é complexo demais para ser descrito em regras explícitas. Como você escreveria, regra por regra, todas as características visuais que definem "isso é um gato" em uma foto? A quantidade de exceções, variações de ângulo, iluminação, raça e postura tornaria essa tarefa impraticável manualmente.
 
@@ -67,10 +67,10 @@ Analogia didática: pense em como se ensina uma criança a reconhecer um cachorr
 
 Termos técnicos importantes deste slide:
 
-- **Dataset** (conjunto de dados): a coleção de exemplos usada para treinar o sistema.
-- **Modelo**: o resultado do processo de **treinamento** — uma estrutura matemática que "aprendeu" os padrões dos dados e agora pode ser usada para fazer previsões sobre dados novos, nunca vistos antes.
-- Treinamento: o processo de ajustar o modelo repetidamente até que ele consiga reconhecer os padrões esperados com um bom nível de precisão.
-- **Inferência**: o momento em que o modelo já treinado é usado na prática, recebendo um dado novo e produzindo uma resposta (por exemplo, reconhecer uma foto nunca vista antes como "gato" ou "cachorro").
+- Dataset[^2] (conjunto de dados): a coleção de exemplos usada para treinar o sistema.
+- Modelo[^3]: a estrutura matemática resultante do treinamento.
+- Treinamento[^4]: o processo de ajuste do modelo até que ele funcione bem.
+- Inferência[^5]: o uso prático do modelo já treinado, sobre um dado novo.
 
 ---
 
@@ -80,7 +80,7 @@ O Aprendizado de Máquina não é uma técnica única — existem três grandes 
 
 ### Aprendizado Supervisionado
 
-Cada exemplo do conjunto de dados já vem acompanhado da resposta correta. Por exemplo: uma foto de gato, junto com a etiqueta (ou **label**, no termo técnico em inglês) "gato". O sistema aprende comparando sua própria previsão com a resposta correta fornecida, e ajustando-se para errar cada vez menos.
+Cada exemplo do conjunto de dados já vem acompanhado da resposta correta. Por exemplo: uma foto de gato, junto com a etiqueta (ou label[^6], no termo técnico em inglês) "gato". O sistema aprende comparando sua própria previsão com a resposta correta fornecida, e ajustando-se para errar cada vez menos.
 
 Uma boa analogia é estudar com um gabarito em mãos: você tenta responder a questão e imediatamente confere se acertou, ajustando seu raciocínio para a próxima tentativa.
 
@@ -90,7 +90,7 @@ Esse é o tipo de aprendizado mais comum em aplicações práticas de mercado �
 
 Aqui, o sistema recebe uma grande quantidade de dados sem nenhuma etiqueta, ou seja, sem informação sobre qual é a resposta "certa". A tarefa do sistema é encontrar, sozinho, padrões, agrupamentos ou estruturas escondidas dentro desses dados.
 
-Uma analogia útil: imagine que você recebe uma gaveta bagunçada cheia de meias soltas, sem saber quais são os pares. Mesmo sem essa informação, é possível agrupar as meias por cor, textura ou tamanho, encontrando uma organização sozinho, apenas observando semelhanças. O termo técnico para esse tipo de agrupamento automático é **clusterização** (do inglês clustering), que será estudado com profundidade na Unidade Curricular de Machine Learning (UC9).
+Uma analogia útil: imagine que você recebe uma gaveta bagunçada cheia de meias soltas, sem saber quais são os pares. Mesmo sem essa informação, é possível agrupar as meias por cor, textura ou tamanho, encontrando uma organização sozinho, apenas observando semelhanças. O termo técnico para esse tipo de agrupamento automático é clusterização[^7] (do inglês clustering), que será estudado com profundidade na Unidade Curricular de Machine Learning (UC9).
 
 ### Aprendizado por Reforço
 
@@ -104,13 +104,13 @@ Esse é o tipo de aprendizado usado, por exemplo, para treinar sistemas de IA ca
 
 As Redes Neurais Artificiais são, hoje, a tecnologia central por trás da maior parte dos avanços recentes em Inteligência Artificial, incluindo Deep Learning e Inteligência Artificial Generativa.
 
-O nome faz referência (de forma bastante distante e simplificada) ao funcionamento do cérebro humano, que é composto por neurônios biológicos conectados entre si. Uma Rede Neural Artificial é composta por unidades de processamento chamadas **neurônios artificiais**, organizadas em camadas:
+O nome faz referência (de forma bastante distante e simplificada) ao funcionamento do cérebro humano, que é composto por neurônios biológicos conectados entre si. Uma Rede Neural Artificial é composta por unidades de processamento chamadas neurônios artificiais[^8], organizadas em camadas:
 
-- **Camada** de entrada (input layer): recebe os dados brutos que o sistema vai processar (por exemplo, os valores numéricos que representam os pixels de uma imagem).
+- Camada[^9] de entrada (input layer): recebe os dados brutos que o sistema vai processar (por exemplo, os valores numéricos que representam os pixels de uma imagem).
 - Camadas ocultas (hidden layers): ficam entre a entrada e a saída, e são responsáveis pelo processamento matemático propriamente dito. É aqui que os padrões complexos são identificados.
 - Camada de saída (output layer): entrega o resultado final do processamento (por exemplo, a probabilidade de a imagem conter um gato).
 
-Cada conexão entre neurônios artificiais tem um valor numérico associado, chamado **peso** (weight), que determina a importância daquela conexão específica no cálculo final. O processo de "treinar" uma rede neural consiste, essencialmente, em ajustar repetidamente esses pesos até que a rede produza respostas cada vez mais corretas.
+Cada conexão entre neurônios artificiais tem um valor numérico associado, chamado peso[^10] (weight), que determina a importância daquela conexão específica no cálculo final. O processo de "treinar" uma rede neural consiste, essencialmente, em ajustar repetidamente esses pesos até que a rede produza respostas cada vez mais corretas.
 
 Este curso dedica uma Unidade Curricular inteira a este tema (UC13 — Desenvolver Redes Neurais Artificiais, com 80 horas), então não é necessário memorizar todos os detalhes agora. A ideia central a reter neste momento é: camadas de neurônios artificiais processando informação em sequência, ajustando pesos numéricos ao longo do treinamento.
 
@@ -150,8 +150,8 @@ Aplicações práticas de PLN incluem:
 
 Alguns termos técnicos desta área, que serão aprofundados na UC15 (Utilizar Processamento de Linguagem Natural nos Casos de Uso para Inteligência Artificial, 120 horas):
 
-- **Tokenização**: processo de dividir um texto em unidades menores (palavras, partes de palavras ou até caracteres), chamadas tokens, para que possam ser processadas matematicamente.
-- **Corpus**: um grande conjunto de textos usado para treinar um sistema de PLN.
+- Tokenização[^11]: processo de dividir um texto em unidades menores, chamadas tokens.
+- Corpus[^12]: um grande conjunto de textos usado para treinar um sistema de PLN.
 
 ---
 
@@ -159,7 +159,7 @@ Alguns termos técnicos desta área, que serão aprofundados na UC15 (Utilizar P
 
 Visão Computacional é a área da Inteligência Artificial dedicada a ensinar o computador a interpretar imagens e vídeos — ou seja, a "enxergar" no sentido funcional do termo, mesmo sem qualquer forma de percepção consciente.
 
-Tecnicamente, uma imagem digital nada mais é do que uma matriz de números, onde cada número representa a cor e a intensidade luminosa de um ponto específico da imagem, chamado **pixel**. Os algoritmos de Visão Computacional processam essa matriz de números em busca de padrões — bordas, texturas, formas, contornos — até conseguir identificar objetos, rostos ou cenas inteiras.
+Tecnicamente, uma imagem digital nada mais é do que uma matriz de números, onde cada número representa a cor e a intensidade luminosa de um ponto específico da imagem, chamado pixel[^13]. Os algoritmos de Visão Computacional processam essa matriz de números em busca de padrões — bordas, texturas, formas, contornos — até conseguir identificar objetos, rostos ou cenas inteiras.
 
 Aplicações práticas incluem:
 
@@ -192,7 +192,7 @@ Nenhum desses exemplos envolve o uso de um chatbot de conversação como o ChatG
 
 Este é um dos pontos mais importantes deste material, e será retomado repetidamente ao longo do curso.
 
-Nos últimos anos, especialmente a partir da popularização de ferramentas como ChatGPT, Gemini e similares, o termo "Inteligência Artificial" passou a ser usado, na linguagem popular, quase como sinônimo dessas ferramentas de conversação. Esse conjunto de tecnologias é tecnicamente chamado de Inteligência Artificial Generativa: sistemas capazes de gerar conteúdo novo — texto, imagem, áudio ou código — a partir de um comando (chamado **prompt**) fornecido pelo usuário.
+Nos últimos anos, especialmente a partir da popularização de ferramentas como ChatGPT, Gemini e similares, o termo "Inteligência Artificial" passou a ser usado, na linguagem popular, quase como sinônimo dessas ferramentas de conversação. Esse conjunto de tecnologias é tecnicamente chamado de Inteligência Artificial Generativa: sistemas capazes de gerar conteúdo novo — texto, imagem, áudio ou código — a partir de um comando (chamado prompt[^14]) fornecido pelo usuário.
 
 A Inteligência Artificial Generativa é, na prática, uma aplicação específica de Deep Learning combinado com Processamento de Linguagem Natural, operando em uma escala computacional gigantesca (envolvendo bilhões de parâmetros e enormes volumes de texto usados no treinamento). Ela é, portanto, uma fatia do campo mais amplo da Inteligência Artificial — não o campo inteiro.
 
@@ -228,20 +228,20 @@ Inteligência Artificial
 
 ## Glossário de termos técnicos usados neste material
 
-- Algoritmo: sequência finita e bem definida de passos que resolve um problema específico.
-- Dataset (conjunto de dados): coleção de exemplos usados para treinar um sistema de Machine Learning.
-- Modelo: estrutura matemática resultante do processo de treinamento, capaz de fazer previsões sobre dados novos.
-- Treinamento: processo de ajuste repetido de um modelo até que ele reconheça padrões com boa precisão.
-- Inferência: uso prático de um modelo já treinado, aplicado a um dado novo.
-- Label (etiqueta): a resposta correta associada a um exemplo, usada no aprendizado supervisionado.
-- Clusterização: técnica de agrupamento automático de dados sem etiquetas, característica do aprendizado não supervisionado.
-- Neurônio artificial: unidade básica de processamento de uma rede neural artificial.
-- Camada (layer): conjunto de neurônios artificiais organizados em um mesmo nível de processamento (entrada, oculta ou saída).
-- Peso (weight): valor numérico associado a uma conexão entre neurônios artificiais, ajustado durante o treinamento.
-- Tokenização: processo de dividir um texto em unidades menores (tokens) para processamento em PLN.
-- Corpus: grande conjunto de textos usado para treinar um sistema de Processamento de Linguagem Natural.
-- Pixel: menor unidade de uma imagem digital, representada por valores numéricos de cor e intensidade.
-- Prompt: comando ou instrução fornecida por um usuário a um sistema de Inteligência Artificial Generativa.
+[^1]: Algoritmo: sequência finita e bem definida de passos que resolve um problema específico.
+[^2]: Dataset (conjunto de dados): coleção de exemplos usados para treinar um sistema de Machine Learning.
+[^3]: Modelo: estrutura matemática resultante do processo de treinamento, capaz de fazer previsões sobre dados novos.
+[^4]: Treinamento: processo de ajuste repetido de um modelo até que ele reconheça padrões com boa precisão.
+[^5]: Inferência: uso prático de um modelo já treinado, aplicado a um dado novo.
+[^6]: Label (etiqueta): a resposta correta associada a um exemplo, usada no aprendizado supervisionado.
+[^7]: Clusterização: técnica de agrupamento automático de dados sem etiquetas, característica do aprendizado não supervisionado.
+[^8]: Neurônio artificial: unidade básica de processamento de uma rede neural artificial.
+[^9]: Camada (layer): conjunto de neurônios artificiais organizados em um mesmo nível de processamento (entrada, oculta ou saída).
+[^10]: Peso (weight): valor numérico associado a uma conexão entre neurônios artificiais, ajustado durante o treinamento.
+[^11]: Tokenização: processo de dividir um texto em unidades menores (tokens) para processamento em PLN.
+[^12]: Corpus: grande conjunto de textos usado para treinar um sistema de Processamento de Linguagem Natural.
+[^13]: Pixel: menor unidade de uma imagem digital, representada por valores numéricos de cor e intensidade.
+[^14]: Prompt: comando ou instrução fornecida por um usuário a um sistema de Inteligência Artificial Generativa.
 
 ---
 
