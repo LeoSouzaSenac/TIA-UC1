@@ -8,7 +8,7 @@
 
 ## Slide 29 — Abertura da Parte 4: UC1, Aula 1
 
-Chegamos à primeira Unidade Curricular do curso: UC1, Reconhecer Modelos de Arquitetura de Computadores e GPU, com carga horária total de 64 horas. Esta é também a nossa primeira aula técnica, depois da aula de abertura sobre o que é Inteligência Artificial, sobre mercado de trabalho e sobre a estrutura do curso.
+Chegamos à primeira Unidade Curricular do curso: UC1, Reconhecer Modelos de Arquitetura de Computadores e GPU[^1], com carga horária total de 64 horas. Esta é também a nossa primeira aula técnica, depois da aula de abertura sobre o que é Inteligência Artificial, sobre mercado de trabalho e sobre a estrutura do curso.
 
 O foco desta primeira aula é entender como um computador funciona por dentro, no nível mais fundamental: como a informação é organizada, processada e armazenada dentro do hardware. Esse conhecimento é a base sobre a qual absolutamente tudo o que vier depois no curso será construído.
 
@@ -18,7 +18,7 @@ O foco desta primeira aula é entender como um computador funciona por dentro, n
 
 Uma pergunta legítima, que provavelmente já passou pela cabeça de alguns alunos: por que o curso não começa diretamente ensinando Machine Learning ou algum tópico mais diretamente associado a "Inteligência Artificial" no sentido popular do termo?
 
-A resposta é estrutural: toda Inteligência Artificial, por mais sofisticada que seja, é executada em cima de hardware real. Um modelo de Machine Learning, por mais elegante que seja matematicamente, precisa ser processado fisicamente por circuitos eletrônicos que executam operações matemáticas. Entender como esses circuitos — especificamente a CPU (Central Processing Unit, ou Unidade Central de Processamento) e a GPU (Graphics Processing Unit, ou Unidade de Processamento Gráfico) — funcionam por dentro é o alicerce necessário para compreender, mais adiante no curso, por que treinar Inteligência Artificial exige especificamente GPU, e não apenas uma CPU potente.
+A resposta é estrutural: toda Inteligência Artificial, por mais sofisticada que seja, é executada em cima de hardware real. Um modelo de Machine Learning, por mais elegante que seja matematicamente, precisa ser processado fisicamente por circuitos eletrônicos que executam operações matemáticas. Entender como esses circuitos — especificamente a CPU[^2] (Central Processing Unit, ou Unidade Central de Processamento) e a GPU (Graphics Processing Unit, ou Unidade de Processamento Gráfico) — funcionam por dentro é o alicerce necessário para compreender, mais adiante no curso, por que treinar Inteligência Artificial exige especificamente GPU, e não apenas uma CPU potente.
 
 Sem essa base de hardware, muitos conceitos que aparecerão nas próximas Unidades Curriculares (como o motivo pelo qual certas operações de Machine Learning são tão mais rápidas em GPU) seriam aprendidos de forma decorada, sem compreensão real do porquê.
 
@@ -36,11 +36,11 @@ A resposta começa exatamente na diferença fundamental entre como uma CPU e uma
 
 ### O que é a Arquitetura Von Neumann
 
-A Arquitetura Von Neumann, batizada em homenagem ao matemático John von Neumann, que a descreveu em 1945, é o modelo estrutural sobre o qual a grande maioria dos computadores de uso geral (incluindo praticamente todo notebook, desktop e servidor comum) foi construída ao longo das últimas oito décadas.
+A Arquitetura Von Neumann[^3], batizada em homenagem ao matemático John von Neumann, que a descreveu em 1945, é o modelo estrutural sobre o qual a grande maioria dos computadores de uso geral (incluindo praticamente todo notebook, desktop e servidor comum) foi construída ao longo das últimas oito décadas.
 
 ### Conceito central
 
-O conceito central da Arquitetura Von Neumann é que ela utiliza um único espaço de endereçamento de memória e um único barramento (em inglês, bus) para transportar tanto dados quanto instruções.
+O conceito central da Arquitetura Von Neumann é que ela utiliza um único espaço de endereçamento de memória e um único barramento[^4] (em inglês, bus) para transportar tanto dados quanto instruções.
 
 Antes de prosseguir, é necessário explicar cada um desses termos com precisão:
 
@@ -55,15 +55,15 @@ Na Arquitetura Von Neumann, tanto as instruções (o "programa" que diz o que fa
 
 Segundo este modelo, uma CPU é composta por:
 
-- Unidade de Controle (Control Unit): responsável por coordenar e dirigir a execução das instruções, determinando a sequência de operações do processador.
-- Unidade Lógica e Aritmética, conhecida pela sigla em inglês ALU (Arithmetic and Logic Unit): componente responsável por executar, de fato, as operações matemáticas (soma, subtração, multiplicação, entre outras) e lógicas (comparações, por exemplo).
+- Unidade de Controle[^5] (Control Unit): responsável por coordenar e dirigir a execução das instruções, determinando a sequência de operações do processador.
+- Unidade Lógica e Aritmética[^6], conhecida pela sigla em inglês ALU (Arithmetic and Logic Unit): componente responsável por executar, de fato, as operações matemáticas (soma, subtração, multiplicação, entre outras) e lógicas (comparações, por exemplo).
 - Unidade de Memória (Memory Unit): onde ficam armazenados tanto os dados quanto as instruções do programa em execução.
 
 ### A vantagem e o problema deste modelo
 
 A vantagem da Arquitetura Von Neumann é a sua simplicidade e flexibilidade — um único tipo de memória, um único barramento, uma estrutura relativamente simples de projetar e fabricar.
 
-O problema, conhecido tecnicamente como Gargalo de Von Neumann (Von Neumann bottleneck), decorre exatamente dessa simplicidade: como instruções e dados compartilham o mesmo barramento, o processador não consegue, ao mesmo tempo, buscar uma nova instrução na memória e ler ou escrever um dado. Essas duas operações precisam necessariamente acontecer em sequência, uma de cada vez, o que limita a velocidade máxima com que o sistema consegue operar.
+O problema, conhecido tecnicamente como Gargalo de Von Neumann[^7] (Von Neumann bottleneck), decorre exatamente dessa simplicidade: como instruções e dados compartilham o mesmo barramento, o processador não consegue, ao mesmo tempo, buscar uma nova instrução na memória e ler ou escrever um dado. Essas duas operações precisam necessariamente acontecer em sequência, uma de cada vez, o que limita a velocidade máxima com que o sistema consegue operar.
 
 ---
 
@@ -71,7 +71,7 @@ O problema, conhecido tecnicamente como Gargalo de Von Neumann (Von Neumann bott
 
 ### O que é a Arquitetura Harvard
 
-A Arquitetura Harvard surge como uma resposta direta ao gargalo identificado na Arquitetura Von Neumann. O nome faz referência à Universidade Harvard, onde um dos primeiros computadores a utilizar esse modelo (o Harvard Mark I) foi desenvolvido.
+A Arquitetura Harvard[^8] surge como uma resposta direta ao gargalo identificado na Arquitetura Von Neumann. O nome faz referência à Universidade Harvard, onde um dos primeiros computadores a utilizar esse modelo (o Harvard Mark I) foi desenvolvido.
 
 ### Conceito central
 
@@ -87,7 +87,7 @@ A vantagem crítica da Arquitetura Harvard é que ela permite a busca de uma nov
 
 A Arquitetura Harvard, em sua forma mais pura, é utilizada em microcontroladores simples (como os presentes em placas Arduino) e em DSPs (Digital Signal Processors, ou Processadores Digitais de Sinais, chips especializados em processar sinais de áudio, vídeo ou outros sinais digitais em tempo real).
 
-É importante destacar que essa arquitetura é, também, a filosofia estrutural por trás de como as GPUs modernas são desenhadas — um ponto que retomaremos logo a seguir, quando compararmos CPU e GPU diretamente. Além disso, mesmo processadores modernos baseados essencialmente em Von Neumann costumam incorporar uma variante chamada Harvard Modificada em seus níveis de cache mais próximos do núcleo do processador (cache L1), separando fisicamente o cache de instruções do cache de dados, justamente para obter parte dos ganhos de desempenho que a Arquitetura Harvard proporciona.
+É importante destacar que essa arquitetura é, também, a filosofia estrutural por trás de como as GPUs modernas são desenhadas — um ponto que retomaremos logo a seguir, quando compararmos CPU e GPU diretamente. Além disso, mesmo processadores modernos baseados essencialmente em Von Neumann costumam incorporar uma variante chamada Harvard Modificada em seus níveis de cache mais próximos do núcleo[^9] do processador (cache L1), separando fisicamente o cache de instruções do cache de dados, justamente para obter parte dos ganhos de desempenho que a Arquitetura Harvard proporciona.
 
 ---
 
@@ -117,9 +117,9 @@ Treinar um modelo de Inteligência Artificial (particularmente redes neurais e D
 Alguns termos técnicos usados nesta comparação:
 
 - Núcleo (core): unidade de processamento independente dentro de um processador, capaz de executar instruções por conta própria. Um processador com múltiplos núcleos consegue executar múltiplas tarefas verdadeiramente em paralelo.
-- Paralelismo: capacidade de executar múltiplas operações ao mesmo tempo, em vez de uma após a outra.
-- Latência: o tempo que uma única operação leva para ser concluída, do início ao fim.
-- Throughput (vazão): a quantidade total de trabalho que um sistema consegue processar em um determinado intervalo de tempo, mesmo que cada operação individual não seja a mais rápida possível. A CPU é otimizada para baixa latência (resolver uma tarefa complexa rapidamente); a GPU é otimizada para alto throughput (resolver uma quantidade enorme de tarefas simples simultaneamente).
+- Paralelismo[^10]: capacidade de executar múltiplas operações ao mesmo tempo.
+- Latência[^11]: o tempo que uma única operação leva para ser concluída.
+- Throughput[^12] (vazão): a quantidade total de trabalho que um sistema consegue processar em um determinado intervalo de tempo, mesmo que cada operação individual não seja a mais rápida possível. A CPU é otimizada para baixa latência (resolver uma tarefa complexa rapidamente); a GPU é otimizada para alto throughput (resolver uma quantidade enorme de tarefas simples simultaneamente).
 
 ---
 
@@ -129,7 +129,7 @@ Alguns termos técnicos usados nesta comparação:
 
 Uma forma reveladora de entender a diferença entre CPU e GPU é observar como cada uma delas distribui o espaço físico disponível dentro do chip (o circuito integrado de silício onde o processador é fabricado).
 
-A CPU dedica uma parcela significativa do seu espaço físico para memória cache e para a unidade de controle. Isso acontece porque a CPU precisa lidar com tarefas complexas e imprevisíveis, exigindo mecanismos sofisticados de antecipação e de armazenamento temporário de dados frequentemente utilizados.
+A CPU dedica uma parcela significativa do seu espaço físico para memória cache[^13] e para a unidade de controle. Isso acontece porque a CPU precisa lidar com tarefas complexas e imprevisíveis, exigindo mecanismos sofisticados de antecipação e de armazenamento temporário de dados frequentemente utilizados.
 
 - Memória cache: uma memória pequena, porém extremamente rápida, localizada fisicamente muito próxima ao núcleo do processador, usada para armazenar temporariamente dados e instruções frequentemente acessados, evitando a necessidade de buscar essa informação na memória principal (mais lenta) repetidamente. Processadores modernos costumam ter três níveis de cache, chamados L1, L2 e L3 — sendo L1 o menor e mais rápido (mais próximo do núcleo), e L3 o maior e relativamente mais lento (compartilhado entre múltiplos núcleos).
 
@@ -143,23 +143,23 @@ Essa distribuição de espaço físico é a razão de engenharia, no nível mais
 
 ### O que é o nvidia-smi
 
-O nvidia-smi (NVIDIA System Management Interface, ou Interface de Gerenciamento de Sistema da NVIDIA) é uma ferramenta de linha de comando, disponível em sistemas com placas de vídeo (GPUs) da fabricante NVIDIA, que permite monitorar, em tempo real, o estado de funcionamento da GPU. É a primeira ferramenta prática de monitoramento de hardware que utilizaremos neste curso, e será usada repetidamente ao longo de toda a UC1.
+O nvidia-smi[^14] (NVIDIA System Management Interface, ou Interface de Gerenciamento de Sistema da NVIDIA) é uma ferramenta de linha de comando, disponível em sistemas com placas de vídeo (GPUs) da fabricante NVIDIA, que permite monitorar, em tempo real, o estado de funcionamento da GPU. É a primeira ferramenta prática de monitoramento de hardware que utilizaremos neste curso, e será usada repetidamente ao longo de toda a UC1.
 
 ### As quatro métricas principais que o nvidia-smi exibe
 
 **GPU Utilization (Utilização da GPU)**: indica o percentual de tempo em que os núcleos de processamento da GPU estão efetivamente ocupados executando cálculos. Um valor próximo de 0% indica uma GPU praticamente ociosa; um valor próximo de 100% indica uma GPU trabalhando no seu limite de capacidade.
 
-**Memory Usage (Uso de Memória)**: indica quanta VRAM (Video RAM, a memória própria da placa de vídeo, que será estudada em detalhe na próxima aula) está atualmente ocupada, geralmente exibida como uma fração — por exemplo, "3500 MiB de 12288 MiB" significa que 3.500 mebibytes de um total de 12.288 mebibytes de VRAM estão em uso.
+**Memory Usage (Uso de Memória)**: indica quanta VRAM[^15] (Video RAM, a memória própria da placa de vídeo, que será estudada em detalhe na próxima aula) está atualmente ocupada, geralmente exibida como uma fração — por exemplo, "3500 MiB de 12288 MiB" significa que 3.500 mebibytes de um total de 12.288 mebibytes de VRAM estão em uso.
 
-**Temperature (Temperatura)**: indica a temperatura atual do chip da GPU. Esse valor é fundamental para evitar um fenômeno chamado throttling: um mecanismo de proteção automática em que a GPU reduz deliberadamente sua própria velocidade de processamento quando a temperatura atinge níveis considerados arriscados, para evitar danos físicos permanentes ao hardware.
+**Temperature (Temperatura)**: indica a temperatura atual do chip da GPU. Esse valor é fundamental para evitar um fenômeno chamado throttling[^16]: um mecanismo de proteção automática em que a GPU reduz deliberadamente sua própria velocidade de processamento quando a temperatura atinge níveis considerados arriscados, para evitar danos físicos permanentes ao hardware.
 
-**Processes (Processos)**: exibe uma lista de quais processos (programas em execução, identificados por um número único chamado PID, Process Identifier, ou Identificador de Processo) estão, no momento, consumindo recursos da GPU, além de quanta memória cada um desses processos está utilizando.
+**Processes (Processos)**: exibe uma lista de quais processos (programas em execução, identificados por um número único chamado PID[^17], Process Identifier, ou Identificador de Processo) estão, no momento, consumindo recursos da GPU, além de quanta memória cada um desses processos está utilizando.
 
 ---
 
 ## Slide 37 — Prática em terminal: primeiros comandos
 
-Esta seção apresenta e explica, linha por linha, os comandos de terminal introduzidos na aula. Um terminal (ou linha de comando) é uma interface de texto que permite controlar o computador digitando comandos diretamente, em vez de utilizar cliques e janelas gráficas — é a ferramenta de trabalho central de praticamente qualquer profissional de tecnologia, e será usada extensivamente ao longo de todo este curso.
+Esta seção apresenta e explica, linha por linha, os comandos de terminal[^18] introduzidos na aula. Um terminal (ou linha de comando) é uma interface de texto que permite controlar o computador digitando comandos diretamente, em vez de utilizar cliques e janelas gráficas — é a ferramenta de trabalho central de praticamente qualquer profissional de tecnologia, e será usada extensivamente ao longo de todo este curso.
 
 ```bash
 # Ver estado geral instantâneo
@@ -180,7 +180,7 @@ O comando watch é um utilitário do sistema Linux que executa repetidamente um 
 nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv
 ```
 
-Este comando utiliza dois parâmetros adicionais do nvidia-smi. O parâmetro `--query-gpu` permite especificar exatamente quais métricas devem ser exibidas (neste caso, utilização da GPU e memória usada), em vez de exibir o relatório completo padrão. O parâmetro `--format=csv` especifica que a saída deve ser formatada como CSV (Comma-Separated Values, ou Valores Separados por Vírgula), um formato de texto simples, tabular, amplamente utilizado para que outros programas ou scripts (pequenos programas de automação, tema da Unidade Curricular futura sobre automação com Bash) consigam ler e processar essa informação automaticamente, sem depender de interpretação humana visual.
+Este comando utiliza dois parâmetros adicionais do nvidia-smi. O parâmetro `--query-gpu` permite especificar exatamente quais métricas devem ser exibidas (neste caso, utilização da GPU e memória usada), em vez de exibir o relatório completo padrão. O parâmetro `--format=csv` especifica que a saída deve ser formatada como CSV[^19] (Comma-Separated Values, ou Valores Separados por Vírgula), um formato de texto simples, tabular, amplamente utilizado para que outros programas ou scripts[^20] (pequenos programas de automação, tema da Unidade Curricular futura sobre automação com Bash) consigam ler e processar essa informação automaticamente, sem depender de interpretação humana visual.
 
 ### Alternativa sem GPU física
 
@@ -204,26 +204,26 @@ Na próxima aula, o curso avança para os modelos de processamento SIMD, MIMD, R
 
 ## Glossário completo de termos técnicos desta aula
 
-- CPU (Central Processing Unit / Unidade Central de Processamento): o processador principal de um computador, otimizado para executar tarefas sequenciais complexas.
-- GPU (Graphics Processing Unit / Unidade de Processamento Gráfico): processador especializado em executar uma grande quantidade de operações simples em paralelo, originalmente projetado para renderização gráfica e hoje amplamente utilizado para treinar Inteligência Artificial.
-- Arquitetura Von Neumann: modelo de computador com memória única e barramento único, compartilhados entre dados e instruções.
-- Arquitetura Harvard: modelo de computador com memórias e barramentos separados para dados e instruções.
-- Gargalo de Von Neumann: limitação de desempenho causada pelo compartilhamento de um único barramento entre dados e instruções.
-- Barramento (bus): caminho físico por onde trafegam dados, endereços e sinais de controle dentro de um computador.
-- Unidade de Controle (Control Unit): componente do processador responsável por coordenar a execução das instruções.
-- Unidade Lógica e Aritmética (ALU): componente do processador responsável por executar operações matemáticas e lógicas.
-- Memória cache: memória pequena e rápida, próxima ao núcleo do processador, usada para armazenar dados de acesso frequente.
-- Núcleo (core): unidade de processamento independente dentro de um processador.
-- Paralelismo: execução simultânea de múltiplas operações.
-- Latência: tempo necessário para concluir uma única operação.
-- Throughput (vazão): quantidade total de trabalho processado em um intervalo de tempo.
-- VRAM (Video RAM): memória própria de uma placa de vídeo (GPU), separada da memória RAM principal do computador.
-- Throttling: redução automática de desempenho de um componente de hardware para evitar superaquecimento.
-- PID (Process Identifier / Identificador de Processo): número único que identifica um processo em execução em um sistema operacional.
-- nvidia-smi (NVIDIA System Management Interface): ferramenta de linha de comando para monitoramento de GPUs NVIDIA.
-- Terminal (linha de comando): interface de texto para controle direto do computador por meio de comandos digitados.
-- CSV (Comma-Separated Values / Valores Separados por Vírgula): formato de arquivo de texto simples e tabular, amplamente utilizado para troca de dados entre sistemas.
-- Script: pequeno programa, geralmente utilizado para automatizar tarefas repetitivas.
+[^1]: GPU (Graphics Processing Unit / Unidade de Processamento Gráfico): processador especializado em executar uma grande quantidade de operações simples em paralelo, originalmente projetado para renderização gráfica e hoje amplamente utilizado para treinar Inteligência Artificial.
+[^2]: CPU (Central Processing Unit / Unidade Central de Processamento): o processador principal de um computador, otimizado para executar tarefas sequenciais complexas.
+[^3]: Arquitetura Von Neumann: modelo de computador com memória única e barramento único, compartilhados entre dados e instruções.
+[^4]: Barramento (bus): caminho físico por onde trafegam dados, endereços e sinais de controle dentro de um computador.
+[^5]: Unidade de Controle (Control Unit): componente do processador responsável por coordenar a execução das instruções.
+[^6]: Unidade Lógica e Aritmética (ALU): componente do processador responsável por executar operações matemáticas e lógicas.
+[^7]: Gargalo de Von Neumann: limitação de desempenho causada pelo compartilhamento de um único barramento entre dados e instruções.
+[^8]: Arquitetura Harvard: modelo de computador com memórias e barramentos separados para dados e instruções.
+[^9]: Núcleo (core): unidade de processamento independente dentro de um processador.
+[^10]: Paralelismo: execução simultânea de múltiplas operações.
+[^11]: Latência: tempo necessário para concluir uma única operação.
+[^12]: Throughput (vazão): quantidade total de trabalho processado em um intervalo de tempo.
+[^13]: Memória cache: memória pequena e rápida, próxima ao núcleo do processador, usada para armazenar dados de acesso frequente.
+[^14]: nvidia-smi (NVIDIA System Management Interface): ferramenta de linha de comando para monitoramento de GPUs NVIDIA.
+[^15]: VRAM (Video RAM): memória própria de uma placa de vídeo (GPU), separada da memória RAM principal do computador.
+[^16]: Throttling: redução automática de desempenho de um componente de hardware para evitar superaquecimento.
+[^17]: PID (Process Identifier / Identificador de Processo): número único que identifica um processo em execução em um sistema operacional.
+[^18]: Terminal (linha de comando): interface de texto para controle direto do computador por meio de comandos digitados.
+[^19]: CSV (Comma-Separated Values / Valores Separados por Vírgula): formato de arquivo de texto simples e tabular, amplamente utilizado para troca de dados entre sistemas.
+[^20]: Script: pequeno programa, geralmente utilizado para automatizar tarefas repetitivas.
 
 ---
 
