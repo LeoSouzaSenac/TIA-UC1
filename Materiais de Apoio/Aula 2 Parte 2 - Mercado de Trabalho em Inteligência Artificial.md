@@ -1,5 +1,5 @@
 # Mercado de Trabalho em Inteligência Artificial
-### Material de apoio 2 de 4 — Técnico em Inteligência Artificial (Senac RS)
+### Material de apoio 2/4 — Técnico em Inteligência Artificial (Senac RS)
 
 ---
 
@@ -113,4 +113,4 @@ Essa estrutura foi desenhada deliberadamente para acompanhar a trajetória natur
 
 ---
 
-Este material corresponde à Parte 2 da aula de abertura do curso. O próximo material (3 de 4) apresenta a estrutura completa do curso técnico — e esclarece, em detalhe, o que ele não é.
+Este material corresponde à Parte 2 da aula de abertura do curso. O próximo material (3/4) apresenta a estrutura completa do curso técnico — e esclarece, em detalhe, o que ele não é.
