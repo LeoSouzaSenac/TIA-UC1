@@ -1,5 +1,5 @@
 # Mercado de Trabalho em Inteligência Artificial
-### Material de apoio 2 de 4 — Técnico em Inteligência Artificial (Senac RS)
+### Material de apoio 2/4 — Técnico em Inteligência Artificial (Senac RS)
 
 > Cada seção deste material está identificada com o número do slide correspondente na apresentação. Todo termo técnico usado é explicado no momento em que aparece, e também reunido no glossário final.
 
@@ -37,7 +37,7 @@ Empresas de varejo utilizam sistemas de recomendação de produtos (sugerindo it
 
 ### Indústria 4.0
 
-O termo **Indústria 4.0** se refere à quarta revolução industrial, caracterizada pela integração de sistemas digitais, sensores e Inteligência Artificial aos processos produtivos tradicionais. Nesse contexto, a IA é usada para **manutenção preditiva** (prever quando uma máquina industrial vai falhar, antes que a falha realmente aconteça, com base em sensores que monitoram vibração, temperatura e outros indicadores) e para controle de qualidade automatizado (identificar produtos com defeito em uma linha de produção, por meio de câmeras e Visão Computacional, com velocidade e consistência maiores do que a inspeção humana).
+O termo Indústria 4.0[^1] se refere à quarta revolução industrial, caracterizada pela integração de sistemas digitais, sensores e Inteligência Artificial aos processos produtivos tradicionais. Nesse contexto, a IA é usada para manutenção preditiva[^2] (prever quando uma máquina industrial vai falhar, antes que a falha realmente aconteça, com base em sensores que monitoram vibração, temperatura e outros indicadores) e para controle de qualidade automatizado (identificar produtos com defeito em uma linha de produção, por meio de câmeras e Visão Computacional, com velocidade e consistência maiores do que a inspeção humana).
 
 ### Agronegócio
 
@@ -45,7 +45,7 @@ No Brasil, setor de enorme relevância econômica, a Inteligência Artificial é
 
 ### Segurança Pública
 
-Sistemas de Inteligência Artificial também são utilizados no reconhecimento de padrões e na análise automatizada de imagens de câmeras de monitoramento, apoiando o trabalho de órgãos de segurança pública. Esse tipo de aplicação, em particular, levanta questões éticas relevantes — sobre privacidade, **viés algorítmico** e uso responsável da tecnologia — que serão discutidas com profundidade na Unidade Curricular de Ética e Responsabilidade em Inteligência Artificial (UC10).
+Sistemas de Inteligência Artificial também são utilizados no reconhecimento de padrões e na análise automatizada de imagens de câmeras de monitoramento, apoiando o trabalho de órgãos de segurança pública. Esse tipo de aplicação, em particular, levanta questões éticas relevantes — sobre privacidade, viés algorítmico[^3] e uso responsável da tecnologia — que serão discutidas com profundidade na Unidade Curricular de Ética e Responsabilidade em Inteligência Artificial (UC10).
 
 ---
 
@@ -71,11 +71,11 @@ Profissional especializado em construir aplicações práticas utilizando Proces
 
 ### Especialista em Ética e Governança de Inteligência Artificial
 
-Profissional dedicado a avaliar e mitigar riscos éticos, sociais e legais associados ao desenvolvimento e à implementação de sistemas de Inteligência Artificial, incluindo questões como viés algorítmico, privacidade de dados e conformidade com legislações como a Lei Geral de Proteção de Dados (**LGPD**). Essa é uma área de demanda crescente, à medida que a regulamentação sobre Inteligência Artificial se torna mais rigorosa em todo o mundo.
+Profissional dedicado a avaliar e mitigar riscos éticos, sociais e legais associados ao desenvolvimento e à implementação de sistemas de Inteligência Artificial, incluindo questões como viés algorítmico, privacidade de dados e conformidade com legislações como a Lei Geral de Proteção de Dados (LGPD[^4]). Essa é uma área de demanda crescente, à medida que a regulamentação sobre Inteligência Artificial se torna mais rigorosa em todo o mundo.
 
 ### Arquiteto de Cloud Computing e Big Data para Inteligência Artificial
 
-Profissional responsável por projetar a infraestrutura de **computação em nuvem** (Cloud Computing) e de processamento de grandes volumes de dados (**Big Data**) necessária para treinar e executar sistemas de Inteligência Artificial em escala.
+Profissional responsável por projetar a infraestrutura de computação em nuvem[^5] (Cloud Computing) e de processamento de grandes volumes de dados (Big Data[^6]) necessária para treinar e executar sistemas de Inteligência Artificial em escala.
 
 ---
 
@@ -104,12 +104,12 @@ Essa estrutura foi desenhada deliberadamente para acompanhar a trajetória natur
 
 ## Glossário de termos utilizados neste material
 
-- Indústria 4.0: termo que descreve a integração de tecnologias digitais, sensores e Inteligência Artificial aos processos produtivos industriais tradicionais.
-- Manutenção preditiva: técnica que utiliza dados de sensores e Machine Learning para prever falhas em equipamentos antes que elas ocorram.
-- Viés algorítmico: distorção sistemática nas previsões ou decisões de um sistema de Inteligência Artificial, geralmente originada por dados de treinamento não representativos ou desequilibrados.
-- LGPD (Lei Geral de Proteção de Dados): legislação brasileira que regula o tratamento de dados pessoais por empresas e órgãos públicos.
-- Cloud Computing (Computação em Nuvem): modelo de disponibilização de recursos computacionais (processamento, armazenamento, softwares) por meio da internet, sem a necessidade de infraestrutura física própria.
-- Big Data: campo dedicado ao armazenamento, processamento e análise de volumes de dados grandes e complexos demais para serem tratados por ferramentas tradicionais de banco de dados.
+[^1]: Indústria 4.0: termo que descreve a integração de tecnologias digitais, sensores e Inteligência Artificial aos processos produtivos industriais tradicionais.
+[^2]: Manutenção preditiva: técnica que utiliza dados de sensores e Machine Learning para prever falhas em equipamentos antes que elas ocorram.
+[^3]: Viés algorítmico: distorção sistemática nas previsões ou decisões de um sistema de Inteligência Artificial, geralmente originada por dados de treinamento não representativos ou desequilibrados.
+[^4]: LGPD (Lei Geral de Proteção de Dados): legislação brasileira que regula o tratamento de dados pessoais por empresas e órgãos públicos.
+[^5]: Cloud Computing (Computação em Nuvem): modelo de disponibilização de recursos computacionais (processamento, armazenamento, softwares) por meio da internet, sem a necessidade de infraestrutura física própria.
+[^6]: Big Data: campo dedicado ao armazenamento, processamento e análise de volumes de dados grandes e complexos demais para serem tratados por ferramentas tradicionais de banco de dados.
 
 ---
 
