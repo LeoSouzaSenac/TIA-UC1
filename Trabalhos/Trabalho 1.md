@@ -25,7 +25,7 @@ Todo slide de conteúdo (menos a capa) deve seguir essa estrutura, nessa ordem:
 | **Prazo** | Segunda-feira 27-07-2026 |
 | **Entrega** | Link da apresentação postado nas **Discussions do GitHub** da turma |
 
-## Critérios de avaliação sugeridos
+## Critérios de avaliação
 
 - **Clareza** (os 4 pontos do formato foram todos abordados, de forma compreensível pra quem não sabe o assunto)
 - **Correção técnica** (a explicação está certa)
